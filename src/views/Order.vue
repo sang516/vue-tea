@@ -167,7 +167,6 @@ export default {
               .then((res) => {
                 if (res.success) {
                   //打开支付宝支付的页面
-                  console.log(res.paymentUrl);
                   window.location.href = res.paymentUrl;
                 }
               });

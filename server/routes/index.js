@@ -181,16 +181,11 @@ router.post('/api/recovery', function(req, res, next) {
     })
 })
 
+//发送短信验证码
 router.post('/api/code', function(req, res, next) {
-    res.send({
-        code: 200,
-        data: {
-            success: true,
-            data: 1234
-        }
-    })
 
     /*let tel = req.body.phone;
+
     // 短信应用SDK AppID
     var appid = 1400187558; // SDK AppID是1400开头
 
@@ -210,7 +205,7 @@ router.post('/api/code', function(req, res, next) {
     var qcloudsms = QcloudSms(appid, appkey);
 
     // 设置请求回调处理, 这里只是演示，用户需要自定义相应处理回调
-    function callback(err, res2, resData) {
+    function callback(err, ress, resData) {
         if (err) {
             console.log("err: ", err);
         } else {
@@ -218,16 +213,27 @@ router.post('/api/code', function(req, res, next) {
                 code: 200,
                 data: {
                     success: true,
-                    data: res2.req.body.params[0]
+                    data: ress.req.body.params[0]
                 }
             })
         }
     }
+
     var ssender = qcloudsms.SmsSingleSender();
+    //这个变量：params 就是往手机上，发送的短信
     var params = [Math.floor(Math.random() * (9999 - 1000)) + 1000];
     ssender.sendWithParam(86, phoneNumbers[0], templateId,
-        params, smsSign, "", "", callback); // 签名参数不能为空串*/
-});
+        params, smsSign, "", "", callback); // 签名参数不能为空串
+        */
+    res.send({
+        code: 200,
+        data: {
+            success: true,
+            data: 1024
+        }
+    })
+
+})
 
 router.get('/api/goods/id', function(req, res, next) {
     let id = req.query.id;
@@ -1213,7 +1219,6 @@ router.post('/api/payment', function(req, res, next) {
     );
     //对接支付宝成功，支付宝方返回的数据
     result.then(resp => {
-        console.log(resp);
         res.send({
             data: {
                 code: 200,

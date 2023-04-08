@@ -6,7 +6,7 @@ const alipaySdk = new AlipaySdk({
     //签名算法
     signType: 'RSA2',
     //支付宝网关
-    gateway: 'https://openapi.alipaydev.com/gateway.do',
+    gateway: 'https://openapi-sandbox.dl.alipaydev.com/gateway.do',
     //支付宝公钥
     alipayPublicKey: 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1pmk3Hgdl8suIMbFknPUmsJ4UuC7VNghFgW6e0LxNs1rzn8BFhcwb3+GiQ8nKcyxCr+nEdDnJgE0hTkIpKW5lKpJQoRB1bIthCID6jJJX6Qu7qO7mpBZwBv3btFTTFz105p+BbhOVr8sAmGBEzD/OYWFIKsbQWMFjnhwD29aRWHxZx6CbwN9TcJbciGp4l/zpJEN9VGR0DUzZZLRONPXTWmc8VB1xlgWCwSOiUKA4LIIDvY+fKD7VX50YMqh4hXFAim0RDaTbtw2jNZFwVGkg/n8yfnVDcDbERScXT+xORbSgCaYRfa3Ye8kft+42mV59UokqR5w4hHtRlX1aygc9QIDAQAB',
     //应用私钥
